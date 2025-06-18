@@ -1,220 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inovatech Gráfica Rápida - Serviços gráficos com qualidade e agilidade" />
   <title>Inovatech Gráfica Rápida</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
     body {
-      font-family: 'Open Sans', sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-    
-    /* Navbar fixa */
-    nav.navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-    }
-    
-    nav.navbar .logo img {
-      height: 50px;
-    }
-    
-    nav.navbar ul {
-      list-style: none;
-      display: flex;
-    }
-    
-    nav.navbar ul li {
-      margin-left: 20px;
-    }
-    
-    nav.navbar ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      transition: color 0.3s;
-      padding: 8px;
-    }
-    
-    nav.navbar ul li a:hover {
-      color: #E1306C;
-    }
-    
-    /* Hero Section */
-    header.hero {
-      height: 100vh;
-      background: url('banner.jpg') center/cover no-repeat;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      position: relative;
-      color: #fff;
-      padding: 0 20px;
+      min-height: 100vh;
+      padding: 20px;
     }
-    
-    header.hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: -1;
-    }
-    
-    header.hero h1 {
-      font-size: 3em;
+    img {
+      max-width: 300px;
+      height: auto;
       margin-bottom: 20px;
     }
-    
-    header.hero p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-      max-width: 600px;
+    h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
     }
-    
-    .btn-instagram {
-      background-color: #E1306C;
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0 30px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 1rem;
       color: #fff;
-      padding: 15px 30px;
+      background-color: #d4a038;
       border: none;
+      border-radius: 8px;
       text-decoration: none;
-      font-size: 1em;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s ease;
     }
-    
-    .btn-instagram:hover {
-      background-color: #C13584;
-    }
-    
-    /* Seções internas */
-    section.content {
-      padding: 60px 20px;
-      text-align: center;
-      background: #f9f9f9;
-    }
-    
-    section.content:nth-of-type(even) {
-      background: #fff;
-    }
-    
-    section.content h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    
-    section.content p {
-      font-size: 1em;
-      max-width: 800px;
-      margin: 0 auto;
-      color: #555;
-    }
-    
-    /* Rodapé */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    
-    /* Responsividade */
-    @media (max-width: 768px) {
-      header.hero h1 {
-        font-size: 2.5em;
-      }
-      
-      nav.navbar {
-        flex-direction: column;
-      }
-      
-      nav.navbar ul {
-        flex-direction: column;
-        margin-top: 10px;
-      }
-      
-      nav.navbar ul li {
-        margin-left: 0;
-        margin-top: 10px;
-      }
+    .btn:hover {
+      background-color: #b98429;
     }
   </style>
 </head>
 <body>
-  <!-- Menu de Navegação -->
-  <nav class="navbar">
-    <div class="logo">
-      <!-- Substitua "logo.png" pelo caminho para o seu logo -->
-      <a href="#hero"><img src="logo.png" alt="Logo Inovatech"></a>
-    </div>
-    <ul>
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#services">Serviços</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-  
-  <!-- Seção Hero -->
-  <header id="hero" class="hero">
-    <h1>Inovatech Gráfica Rápida</h1>
-    <p>Transformamos ideias em realidade com agilidade e excelência.</p>
-    <!-- Link para o Instagram -->
-    <a class="btn-instagram" href="https://instagram.com/seu_perfil" target="_blank">Acessar Instagram</a>
-  </header>
-  
-  <!-- Seção Sobre -->
-  <section id="about" class="content">
-    <h2>Sobre Nós</h2>
-    <p>A Inovatech é referência em soluções gráficas, unindo tecnologia e criatividade para oferecer resultados surpreendentes para cada cliente.</p>
-  </section>
-  
-  <!-- Seção Serviços -->
-  <section id="services" class="content">
-    <h2>Nossos Serviços</h2>
-    <p>Oferecemos uma gama completa de serviços gráficos, incluindo design digital, impressão de alta qualidade e projetos sob medida para dar vida à sua ideia.</p>
-  </section>
-  
-  <!-- Seção Contato -->
-  <section id="contact" class="content">
-    <h2>Contato</h2>
-    <p>Fale conosco para orçamentos ou mais informações. Estamos prontos para transformar sua visão em realidade!</p>
-    <!-- Aqui pode ser adicionado um formulário de contato, se desejado -->
-  </section>
-  
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Inovatech Gráfica Rápida. Todos os direitos reservados.</p>
-  </footer>
+  <img src="LOGO.jpg" alt="Inovatech Gráfica Rápida Logo" />
+  <h1>Inovatech Gráfica Rápida</h1>
+  <p>Qualidade e agilidade em serviços gráficos</p>
+  <a class="btn" href="https://wa.me/5537998333615" target="_blank">Fale Conosco no WhatsApp</a>
+  <a class="btn" href="https://instagram.com/inovatechgrafica_rapida" target="_blank">Nosso Instagram</a>
 </body>
 </html>
